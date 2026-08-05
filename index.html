@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
+  <title>نمایش بروشور</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; background: #202124; }
+    body { overflow: hidden; }
+
+    .pdf-viewer {
+      display: block;
+      width: 100%;
+      height: 100dvh;
+      min-height: 100vh;
+      border: 0;
+      background: #202124;
+    }
+
+    .fallback {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #fff;
+      font-family: Tahoma, Arial, sans-serif;
+      text-align: center;
+      line-height: 1.9;
+    }
+
+    .fallback a {
+      color: #8ab4f8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <object
+    class="pdf-viewer"
+    data="./brochure.pdf#view=FitH"
+    type="application/pdf"
+    aria-label="نمایش فایل PDF"
+  >
+    <div class="fallback">
+      <p>
+        مرورگر شما نمایش مستقیم PDF را پشتیبانی نمی‌کند.<br />
+        <a href="./brochure.pdf" target="_blank" rel="noopener">برای باز کردن فایل PDF کلیک کنید</a>
+      </p>
+    </div>
+  </object>
+</body>
+</html>
